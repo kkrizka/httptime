@@ -23,7 +23,6 @@ def enable_logging(outfile=None):
         prog=os.path.basename(sys.argv[0])
         date=datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%SZ%z')
         outfile=f'{odir}/{prog}-{date}.txt'
-        print(outfile)
         if not os.path.exists(odir):
             os.makedirs(odir)
     
