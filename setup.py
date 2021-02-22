@@ -11,7 +11,7 @@ README = (HERE / "README.md").read_text()
 
 setuptools.setup(
     name='httptime',
-    version='0.1',
+    version='0.1.0',
     description='Module for timing http queries inside a python program.',
     long_description=README,
     long_description_content_type="text/markdown",
