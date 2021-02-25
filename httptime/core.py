@@ -21,7 +21,7 @@ def enable_logging(outfile=None):
     if outfile==None: # Automatic location
         odir=os.path.expanduser('~/.httptime')
         prog=os.path.basename(sys.argv[0])
-        date=datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%SZ%z')
+        date=datetime.datetime.now().strftime('%Y-%m-%d_%H:%M:%SZ%z')
         outfile=f'{odir}/{prog}-{date}.txt'
         if not os.path.exists(odir):
             os.makedirs(odir)
