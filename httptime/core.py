@@ -36,7 +36,7 @@ def enable_logging(outfile=None):
     # Use logger for http.client
     # Credit: https://stackoverflow.com/questions/16337511/log-all-requests-from-the-python-requests-module
     httpclient_logger = logging.getLogger("http.client")
-    def httpclient_log(*args):
+    def httpclient_log(*args, **kwargs):
         httpclient_logger.log(logging.DEBUG, " ".join(args))
 
     # mask the print() built-in in the http.client module to use
