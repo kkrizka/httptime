@@ -1,9 +1,6 @@
 import dash
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import dcc, html, Input, Output
 import dash_bootstrap_components as dbc
-
-from dash.dependencies import Input, Output
 
 import pandas as pd
 import plotly.express as px
@@ -70,6 +67,7 @@ def create_app(inpath):
                 ]))
         return result
     return app
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Simple visualizer for httptime data.")
     parser.add_argument('inpath'                             , help='Path to httptime output.')
@@ -78,4 +76,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     app=create_app(args.inpath)
-    app.run_server(port=args.port, debug=True)
+    app.run(port=args.port, debug=True)
